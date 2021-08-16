@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
       - run: npm install
-      - run: npm run coveralls
+      - run: npm run coverage
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.0
         env:
