@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha 'src/**/*.spec.js'",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run test"
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-summary npm run test"
   },
   "repository": {
     "type": "git",
