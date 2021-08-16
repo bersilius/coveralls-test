@@ -23,7 +23,7 @@
     "nyc": "^15.1.0"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --recursive --require @babel/register --timeout 15000 'src/**/*.spec.js'",
+    "test": "cross-env NODE_ENV=test _mocha --recursive --require @babel/register --timeout 15000 'src/**/*.spec.js'",
     "help": "istanbul cover 'src/**/*.spec.js'",
     "coverage": "nyc --reporter=lcovonly npm run test"
   },
