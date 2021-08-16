@@ -1,9 +1,4 @@
 {
     "plugins": ["@babel/plugin-proposal-object-rest-spread"],
-    "presets": ["@babel/preset-env"],
-    "env": {
-        "test": {
-            "plugins": ["@istanbuljs/nyc-config-babel"]
-        }
-    }
+    "presets": ["@babel/preset-env"]
 }

@@ -3,7 +3,11 @@ import { expect } from 'chai'
 import { testable } from './index.js'
 
 describe('do', () => {
-    it('testable', () => {
-        expect(testable()).to.eql({ success: true })
+    it('testable', done => {
+        const expectedResult = { success: true }
+        const result = testable()
+        
+        expect(result).to.eql(expectedResult)
+        done()
     })
 })
