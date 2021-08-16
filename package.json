@@ -12,20 +12,19 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.15.0",
     "@babel/register": "^7.15.3",
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.4",
     "coveralls": "^3.1.1",
     "cross-env": "^7.0.3",
     "expect": "^27.0.6",
-    "istanbul": "1.1.0-alpha.1",
     "mocha": "^9.0.3",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test _mocha --recursive --require @babel/register --timeout 15000 'src/**/*.spec.js'",
-    "help": "istanbul cover 'src/**/*.spec.js'",
-    "coverage": "nyc --reporter=lcovonly npm run test"
+    "test": "cross-env NODE_ENV=test mocha 'src/**/*.spec.js'",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text npm run test"
   },
   "repository": {
     "type": "git",
