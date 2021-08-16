@@ -25,7 +25,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --recursive --require @babel/register --timeout 15000 'src/**/*.spec.js'",
     "help": "istanbul cover 'src/**/*.spec.js'",
-    "coverage": "nyc --reporter=lcov npm run test"
+    "coverage": "nyc --reporter=lcovonly npm run test"
   },
   "repository": {
     "type": "git",
